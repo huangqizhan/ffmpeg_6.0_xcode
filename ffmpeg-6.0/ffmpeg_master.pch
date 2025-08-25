@@ -1,0 +1,16 @@
+//
+//  ffmpeg_master.pch
+//  ffmpeg_xcode_6.0
+//
+//  Created by santian_mac on 2023/8/6.
+//
+
+#ifndef ffmpeg_master_pch
+#define ffmpeg_master_pch
+
+#include "config.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* ffmpeg_master_pch */
