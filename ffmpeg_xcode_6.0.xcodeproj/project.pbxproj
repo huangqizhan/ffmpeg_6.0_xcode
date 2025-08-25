@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,7 +34,6 @@
 		900754CF2A935B0300F1666F /* audio_frame_queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4CD1D2A7F2C6D009A3278 /* audio_frame_queue.c */; };
 		900754D02A935E7200F1666F /* pcm.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C8D02A7F2C67009A3278 /* pcm.c */; };
 		90121CCA2A91B4400020E217 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A4D0562A7F2C8D009A3278 /* libavutil.a */; };
-		90121CCC2A91B44C0020E217 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90121CCB2A91B44C0020E217 /* libx264.a */; };
 		90121CCD2A91B49C0020E217 /* libx264.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C96B2A7F2C68009A3278 /* libx264.c */; };
 		904278332A936343000CF79D /* af_aresample.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B12F2A7F2C47009A3278 /* af_aresample.c */; };
 		909AF00B2A9366F300375A7A /* videotoolbox.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4CD752A7F2C6E009A3278 /* videotoolbox.c */; };
@@ -46,7 +45,6 @@
 		90A36CF62A80E9D2003864E9 /* avfoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B5B32A7F2C4B009A3278 /* avfoundation.m */; };
 		90A36CF72A80E9ED003864E9 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A4D0562A7F2C8D009A3278 /* libavutil.a */; };
 		90A36CF82A80EB08003864E9 /* avdevice.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B5A32A7F2C4B009A3278 /* avdevice.c */; };
-		90A36CF92A80EB6A003864E9 /* sdl2.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B5882A7F2C4B009A3278 /* sdl2.c */; };
 		90A36CFA2A80EB86003864E9 /* alldevices.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B5BD2A7F2C4B009A3278 /* alldevices.c */; };
 		90A36CFB2A80EC20003864E9 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B5992A7F2C4B009A3278 /* utils.c */; };
 		90A36CFC2A80EC3F003864E9 /* lavfi.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B5A12A7F2C4B009A3278 /* lavfi.c */; };
@@ -325,7 +323,6 @@
 		90D075502A8C7CFF00209F22 /* snow.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C7482A7F2C66009A3278 /* snow.c */; };
 		90D075512A8C7D2E00209F22 /* hpeldsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4CCA02A7F2C6C009A3278 /* hpeldsp.c */; };
 		90D075542A8C9D7900209F22 /* simple_idct.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4CD272A7F2C6D009A3278 /* simple_idct.c */; };
-		90D075552A8CA1A200209F22 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D074DB2A8C629A00209F22 /* libSDL2.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		90D0755A2A8CCB4E00209F22 /* rawenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B6992A7F2C4B009A3278 /* rawenc.c */; };
 		90E5DB742A8CCFA3007139E0 /* mov.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B6D72A7F2C4B009A3278 /* mov.c */; };
 		90E5DB752A8CD327007139E0 /* isom.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B7BA2A7F2C4C009A3278 /* isom.c */; };
@@ -347,6 +344,8 @@
 		90E5DB872A8CD8A0007139E0 /* riffenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B6BC2A7F2C4B009A3278 /* riffenc.c */; };
 		90E5DB882A8CD8BE007139E0 /* rtpenc_chain.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B6842A7F2C4B009A3278 /* rtpenc_chain.c */; };
 		90EF4B8E2A91EBCF00443643 /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B7DC2A7F2C4C009A3278 /* file.c */; };
+		F353DD672E5C437A0036D0D4 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90121CCB2A91B44C0020E217 /* libx264.a */; };
+		F353DD682E5C43B40036D0D4 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90121CCB2A91B44C0020E217 /* libx264.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -8490,8 +8489,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90121CCC2A91B44C0020E217 /* libx264.a in Frameworks */,
 				90121CCA2A91B4400020E217 /* libavutil.a in Frameworks */,
+				F353DD672E5C437A0036D0D4 /* libx264.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -8500,7 +8499,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				900754B62A9330C400F1666F /* libavfilter.a in Frameworks */,
-				90D075552A8CA1A200209F22 /* libSDL2.a in Frameworks */,
 				90D074DA2A8C621500209F22 /* libz.tbd in Frameworks */,
 				90D074D82A8C61D900209F22 /* libm.tbd in Frameworks */,
 				90D074D62A8C61CE00209F22 /* libiconv.tbd in Frameworks */,
@@ -8511,6 +8509,7 @@
 				90D074CF2A8C5FDB00209F22 /* libavutil.a in Frameworks */,
 				90D074D02A8C5FDB00209F22 /* libswresample.a in Frameworks */,
 				90D074D12A8C5FDB00209F22 /* libswscale.a in Frameworks */,
+				F353DD682E5C43B40036D0D4 /* libx264.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -17691,7 +17690,6 @@
 				90A36CF82A80EB08003864E9 /* avdevice.c in Sources */,
 				90A36CFA2A80EB86003864E9 /* alldevices.c in Sources */,
 				90A36CF62A80E9D2003864E9 /* avfoundation.m in Sources */,
-				90A36CF92A80EB6A003864E9 /* sdl2.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -18089,10 +18087,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/ffmpeg-6.0",
-					/usr/local/include/SDL2,
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ffmpeg-6.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -18109,10 +18104,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/ffmpeg-6.0",
-					/usr/local/include/SDL2,
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ffmpeg-6.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -18442,16 +18434,12 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ffmpeg.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UGE5C8L29T;
+				DEVELOPMENT_TEAM = 85CWKC69K9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/ffmpeg-6.0",
-					/usr/local/include/SDL2,
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ffmpeg-6.0";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/lib,
-					/usr/local/Cellar/sdl2/2.26.2/lib,
 					"$(PROJECT_DIR)/ffmpeg-6.0/3thrparty/libs",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -18463,16 +18451,12 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ffmpeg.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UGE5C8L29T;
+				DEVELOPMENT_TEAM = 85CWKC69K9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/ffmpeg-6.0",
-					/usr/local/include/SDL2,
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ffmpeg-6.0";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/lib,
-					/usr/local/Cellar/sdl2/2.26.2/lib,
 					"$(PROJECT_DIR)/ffmpeg-6.0/3thrparty/libs",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
