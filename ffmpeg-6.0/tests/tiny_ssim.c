@@ -68,7 +68,7 @@ static void ssim_4x4x2_core( const pixel *pix1, intptr_t stride1,
         sums[z][2] = ss;
         sums[z][3] = s12;
         pix1 += 4;
-        pix2 += 4;
+        pix2 += 4;  
     }
 }
 
