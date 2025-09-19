@@ -346,6 +346,15 @@
 		90EF4B8E2A91EBCF00443643 /* file.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B7DC2A7F2C4C009A3278 /* file.c */; };
 		F353DD672E5C437A0036D0D4 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90121CCB2A91B44C0020E217 /* libx264.a */; };
 		F353DD682E5C43B40036D0D4 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90121CCB2A91B44C0020E217 /* libx264.a */; };
+		F3DE01992E7D5177006D413E /* utvideodec.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C7362A7F2C66009A3278 /* utvideodec.c */; };
+		F3DE019A2E7D5233006D413E /* lossless_videodsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C6AE2A7F2C65009A3278 /* lossless_videodsp.c */; };
+		F3DE019B2E7D523A006D413E /* lossless_videoencdsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C6C72A7F2C65009A3278 /* lossless_videoencdsp.c */; };
+		F3DE019C2E7D5249006D413E /* lossless_videodsp_altivec.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C8952A7F2C67009A3278 /* lossless_videodsp_altivec.c */; };
+		F3DE019D2E7D524F006D413E /* lossless_audiodsp_altivec.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C8982A7F2C67009A3278 /* lossless_audiodsp_altivec.c */; };
+		F3DE019E2E7D5256006D413E /* lossless_audiodsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C9D92A7F2C68009A3278 /* lossless_audiodsp.c */; };
+		F3DE019F2E7D5284006D413E /* utvideodsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4CB182A7F2C6A009A3278 /* utvideodsp.c */; };
+		F3DE01A02E7D52B8006D413E /* utvideoenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C8CF2A7F2C67009A3278 /* utvideoenc.c */; };
+		F3DE01A12E7D52D8006D413E /* huffman.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C9BA2A7F2C68009A3278 /* huffman.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -17583,11 +17592,13 @@
 				909AF00B2A9366F300375A7A /* videotoolbox.c in Sources */,
 				90B10D342A83AACF00BB4F4A /* vorbis_parser.c in Sources */,
 				90D075332A8C74EB00209F22 /* cbs_h2645.c in Sources */,
+				F3DE01992E7D5177006D413E /* utvideodec.c in Sources */,
 				90D0754A2A8C7AFE00209F22 /* dynamic_hdr10_plus.c in Sources */,
 				90D075012A8C670A00209F22 /* aac_adtstoasc_bsf.c in Sources */,
 				90D0752F2A8C73B400209F22 /* h264_loopfilter.c in Sources */,
 				90B10D212A83A9C100BB4F4A /* decode.c in Sources */,
 				90B10D1D2A83A99100BB4F4A /* bsf.c in Sources */,
+				F3DE01A12E7D52D8006D413E /* huffman.c in Sources */,
 				90B10D1E2A83A99D00BB4F4A /* codec_desc.c in Sources */,
 				90B10D162A83A92600BB4F4A /* adts_parser.c in Sources */,
 				90B10D352A83AAE200BB4F4A /* xiph.c in Sources */,
@@ -17599,7 +17610,9 @@
 				90D075002A8C668700209F22 /* aac_ac3_parser.c in Sources */,
 				90D075492A8C7AE400209F22 /* dynamic_hdr_vivid.c in Sources */,
 				90B10D292A83AA1B00BB4F4A /* mediacodec.c in Sources */,
+				F3DE019F2E7D5284006D413E /* utvideodsp.c in Sources */,
 				90B10D262A83A9F900BB4F4A /* imgconvert.c in Sources */,
+				F3DE019D2E7D524F006D413E /* lossless_audiodsp_altivec.c in Sources */,
 				900754A62A93067400F1666F /* bswapdsp.c in Sources */,
 				90D075302A8C73FE00209F22 /* golomb.c in Sources */,
 				900754CE2A935A1000F1666F /* audiotoolboxdec.c in Sources */,
@@ -17623,10 +17636,13 @@
 				90D075282A8C725600209F22 /* cbs_sei.c in Sources */,
 				909AF00D2A9366FE00375A7A /* videotoolboxenc.c in Sources */,
 				90D0751A2A8C6FB500209F22 /* h264dec.c in Sources */,
+				F3DE019C2E7D5249006D413E /* lossless_videodsp_altivec.c in Sources */,
 				90B10D1A2A83A96000BB4F4A /* avpacket.c in Sources */,
 				90B10D202A83A9B300BB4F4A /* d3d11va.c in Sources */,
+				F3DE019E2E7D5256006D413E /* lossless_audiodsp.c in Sources */,
 				90D0751C2A8C702B00209F22 /* h264_ps.c in Sources */,
 				90B10D2F2A83AA8300BB4F4A /* qsv_api.c in Sources */,
+				F3DE019B2E7D523A006D413E /* lossless_videoencdsp.c in Sources */,
 				90B10D232A83A9D900BB4F4A /* dv_profile.c in Sources */,
 				90D0753F2A8C76E200209F22 /* h264chroma.c in Sources */,
 				90D075182A8C6F4300209F22 /* null_bsf.c in Sources */,
@@ -17638,11 +17654,13 @@
 				90D0754B2A8C7B1A00209F22 /* startcode.c in Sources */,
 				90D075312A8C744600209F22 /* h264_direct.c in Sources */,
 				90D0751D2A8C705F00209F22 /* h264_slice.c in Sources */,
+				F3DE01A02E7D52B8006D413E /* utvideoenc.c in Sources */,
 				90D075292A8C729000209F22 /* cbs.c in Sources */,
 				90B10D172A83A93200BB4F4A /* allcodecs.c in Sources */,
 				90D0753A2A8C763000209F22 /* h2645data.c in Sources */,
 				90D075482A8C7A1E00209F22 /* h264idct.c in Sources */,
 				90B10D332A83AAB800BB4F4A /* vlc.c in Sources */,
+				F3DE019A2E7D5233006D413E /* lossless_videodsp.c in Sources */,
 				90B10D2B2A83AA3100BB4F4A /* options.c in Sources */,
 				909AF00C2A9366F800375A7A /* videotoolbox_vp9.c in Sources */,
 				90D0751B2A8C700500209F22 /* h264_parser.c in Sources */,
