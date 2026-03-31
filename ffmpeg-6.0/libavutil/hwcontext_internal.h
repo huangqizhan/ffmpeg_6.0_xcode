@@ -26,6 +26,10 @@
 #include "frame.h"
 #include "pixfmt.h"
 
+
+/*
+ 负责编码或解码设备管理 包括数据流转转换等 
+ */
 typedef struct HWContextType {
     enum AVHWDeviceType type;
     const char         *name;

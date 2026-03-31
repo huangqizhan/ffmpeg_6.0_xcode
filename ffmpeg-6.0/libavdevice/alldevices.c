@@ -26,7 +26,11 @@
 extern const AVInputFormat  ff_alsa_demuxer;
 extern const FFOutputFormat ff_alsa_muxer;
 extern const AVInputFormat  ff_android_camera_demuxer;
+
+#if !TARGET_OS_IPHONE
 extern const FFOutputFormat ff_audiotoolbox_muxer;
+#endif
+
 extern const AVInputFormat  ff_avfoundation_demuxer;
 extern const AVInputFormat  ff_bktr_demuxer;
 extern const FFOutputFormat ff_caca_muxer;

@@ -2071,6 +2071,10 @@ typedef struct AVCodecContext {
  * @note  Nothing in this structure should be accessed by the user.  At some
  *        point in future it will not be externally visible at all.
  *
+ *
+ *-hwaccel 这个选项从设计之初就是“给解码用的”，
+  编码器是否用硬件，直接由你选择的 encoder 决定。
+ *ffmpeg -hwaccel videotoolbox  -c h264  -i xx.mp4 此时会从h264解码器的.hw_configs中查找 AVHWAccel_videotoolbox
  * @{
  */
 typedef struct AVHWAccel {

@@ -56,6 +56,14 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "-y -hwaccel videotoolbox -i /Users/haixiaomian/Desktop/ff37.mp4   -vcodec h264_videotoolbox  -acodec copy  /Users/haixiaomian/Desktop/out.mp4"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-y -i /Users/haixiaomian/Desktop/ff37.mp4   -vcodec h264_videotoolbox  -acodec copy  /Users/haixiaomian/Desktop/out.mp4"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "-formats"
             isEnabled = "NO">
          </CommandLineArgument>
@@ -69,7 +77,7 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-y  -f avfoundation -r 30 -i 0:0 -t 10 -vcodec h264_videotoolbox  screen.mp4"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-y  -f avfoundation -i 0:0 -t 10 -vcodec h264_videotoolbox  screen.mp4"
@@ -100,6 +108,13 @@
             isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = ""
+            value = ""
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

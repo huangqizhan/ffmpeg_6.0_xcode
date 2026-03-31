@@ -25,6 +25,8 @@
  * @author Thilo Borgmann <thilo.borgmann@mail.de>
  */
 
+#if !TARGET_OS_IPHONE
+
 #import <AudioToolbox/AudioToolbox.h>
 #include <pthread.h>
 
@@ -73,6 +75,7 @@ static void queue_callback(void* atctx, AudioQueueRef inAQ,
 
 static av_cold int at_write_header(AVFormatContext *avctx)
 {
+
     ATContext *ctx = (ATContext*)avctx->priv_data;
     OSStatus err = noErr;
     CFStringRef device_UID = NULL;
@@ -307,3 +310,5 @@ const FFOutputFormat ff_audiotoolbox_muxer = {
     .p.flags        = AVFMT_NOFILE,
     .p.priv_class   = &at_class,
 };
+
+#endif
