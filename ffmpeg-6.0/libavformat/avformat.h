@@ -905,6 +905,7 @@ typedef struct AVStream {
      * - demuxing: set by libavformat when creating the stream or in
      *             avformat_find_stream_info().
      * - muxing: may be set by the caller before avformat_write_header().
+     * 示这条流在容器里的 角色/属性（不是声道布局）：
      */
     int disposition;
 

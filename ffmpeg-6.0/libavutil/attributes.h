@@ -163,7 +163,7 @@
 #    define av_builtin_constant_p(x) 0
 #    define av_printf_format(fmtpos, attrpos)
 #endif
-
+//被 noreturn 修饰的函数一旦调用成功，程序控制流就不会回到调用点，因此后面的代码不会执行。
 #if AV_GCC_VERSION_AT_LEAST(2,5) || defined(__clang__)
 #    define av_noreturn __attribute__((noreturn))
 #else

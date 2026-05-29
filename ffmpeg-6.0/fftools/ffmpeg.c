@@ -32,6 +32,7 @@
 #include <limits.h>
 #include <stdatomic.h>
 #include <stdint.h>
+#include "opt_common.h"
 
 #if HAVE_IO_H
 #include <io.h>
@@ -4148,8 +4149,7 @@ static int64_t getmaxrss(void)
 #endif
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv){
     int ret;
     BenchmarkTimeStamps ti;
 
@@ -4207,3 +4207,35 @@ int main(int argc, char **argv)
     exit_program(received_nb_signals ? 255 : main_return_code);
     return main_return_code;
 }
+
+
+//
+//int main(int argc , char* argv[]){
+//    avformat_network_init();
+//    avdevice_register_all();
+//    const AVCodec *codec = avcodec_find_encoder(AV_CODEC_ID_MPEG2VIDEO);
+//    AVCodecContext *ctx = avcodec_alloc_context3(codec);
+//    const AVOption *o;
+//    int ret;
+//    if (!ctx) return 1;
+////    /* 1. 按选项名 "idct" 查找（不是 idct_algo） */
+////    o = av_opt_find(ctx, "idct", NULL, AV_OPT_FLAG_ENCODING_PARAM, 0);
+////    printf("av_opt_find(\"idct\") -> %s offset=%td type=%d unit=%s\n",
+////           o ? o->name : "NULL", o ? (ptrdiff_t)o->offset : -1,
+////           o ? o->type : -1, o && o->unit ? o->unit : "(null)");
+////    /* 2. 字符串 "simple" → idct_algo */
+////    ret = av_opt_set(ctx, "idct", "simple", 0);
+////    printf("av_opt_set(idct,simple) ret=%d idct_algo=%d (expect 2)\n",
+////           ret, ctx->idct_algo);
+////    /* 3. 数字 */
+////    ret = av_opt_set(ctx, "idct", "2", 0);
+////    printf("av_opt_set(idct,2) ret=%d idct_algo=%d\n", ret, ctx->idct_algo);
+////    avcodec_free_context(&ctx);
+//    
+//    
+//    
+//
+//    
+//    
+//    return 0;
+//}

@@ -303,6 +303,10 @@ typedef struct AVOption {
      * The logical unit to which the option belongs. Non-constant
      * options and corresponding named constants share the same
      * unit. May be NULL.
+     {"idct", "select IDCT implementation", OFFSET(idct_algo), AV_OPT_TYPE_INT, {.i64 = DEFAULT }, 0, INT_MAX, V|E|D, "idct"},
+     {"auto", NULL, 0, AV_OPT_TYPE_CONST, {.i64 = FF_IDCT_AUTO }, INT_MIN, INT_MAX, V|E|D, "idct"},
+     这里的auto 是idct 的子选项 中间通过 unit 做关联
+     -c:v mpeg2video -idct auto
      */
     const char *unit;
 } AVOption;

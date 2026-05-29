@@ -151,8 +151,6 @@
 		90A4D0B92A7F384D009A3278 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A4D0B82A7F3845009A3278 /* libiconv.tbd */; };
 		90A4D0BB2A7F3860009A3278 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A4D0BA2A7F385A009A3278 /* libbz2.tbd */; };
 		90A4D0BC2A7F387D009A3278 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A4D0562A7F2C8D009A3278 /* libavutil.a */; };
-		90B10CE82A83972700BB4F4A /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A36CEB2A80E93C003864E9 /* libavdevice.a */; };
-		90B10CE92A83972700BB4F4A /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A4D0562A7F2C8D009A3278 /* libavutil.a */; };
 		90B10CEA2A8397B800BB4F4A /* avformat.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B68A2A7F2C4B009A3278 /* avformat.c */; };
 		90B10CEB2A8397F500BB4F4A /* avio.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B68E2A7F2C4B009A3278 /* avio.c */; };
 		90B10CEC2A83980100BB4F4A /* aviobuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B6352A7F2C4B009A3278 /* aviobuf.c */; };
@@ -628,8 +626,34 @@
 		F31B3F832F35F1D000C377AC /* ac3tab.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C82D2A7F2C67009A3278 /* ac3tab.c */; };
 		F31B3F8B2F35F23500C377AC /* libavutil_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B3E862F3496DB00C377AC /* libavutil_ios.a */; };
 		F31B3FCA2F35F36D00C377AC /* libx264_xcode_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B3FC92F35F35400C377AC /* libx264_xcode_ios.a */; };
+		F34745E22FC3DDF700BDD3EC /* ffplay.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B5CA2A7F2C4B009A3278 /* ffplay.c */; };
+		F34745E32FC3DE4000BDD3EC /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B10D0A2A83A8A800BB4F4A /* libavcodec.a */; };
+		F34745E62FC3DE4000BDD3EC /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A36CEB2A80E93C003864E9 /* libavdevice.a */; };
+		F34745E92FC3DE4000BDD3EC /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B10CDB2A8395AF00BB4F4A /* libavformat.a */; };
+		F34745EC2FC3DE4000BDD3EC /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A4D0562A7F2C8D009A3278 /* libavutil.a */; };
+		F34745EF2FC3DE4000BDD3EC /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A36D022A80EE0B003864E9 /* libswresample.a */; };
+		F34745F22FC3DE4000BDD3EC /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A36D1D2A80F257003864E9 /* libswscale.a */; };
+		F34745F52FC3DE6100BDD3EC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D074D92A8C621500209F22 /* libz.tbd */; };
+		F34745F62FC3DE7400BDD3EC /* libm.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D074D72A8C61D900209F22 /* libm.tbd */; };
+		F34745F72FC3DE8900BDD3EC /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A4D0B82A7F3845009A3278 /* libiconv.tbd */; };
+		F34745F82FC3DE9600BDD3EC /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A4D0BA2A7F385A009A3278 /* libbz2.tbd */; };
+		F34745F92FC3DEC000BDD3EC /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D074E22A8C635E00209F22 /* libavfilter.a */; };
+		F34746012FC3E2C000BDD3EC /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F34746002FC3E2C000BDD3EC /* libSDL2-2.0.0.dylib */; };
+		F34746022FC3E2C000BDD3EC /* libSDL2-2.0.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = F34746002FC3E2C000BDD3EC /* libSDL2-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F34746042FC3E34600BDD3EC /* opt_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B5C32A7F2C4B009A3278 /* opt_common.c */; };
+		F34746052FC3E50400BDD3EC /* cmdutils.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B5D52A7F2C4B009A3278 /* cmdutils.c */; };
+		F34746062FC3E54400BDD3EC /* avfft.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C7312A7F2C66009A3278 /* avfft.c */; };
+		F34746082FC3E5E300BDD3EC /* dct32_template.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C68D2A7F2C65009A3278 /* dct32_template.c */; };
+		F34746092FC3E84400BDD3EC /* rdft.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C73F2A7F2C66009A3278 /* rdft.c */; };
+		F347460A2FC3E88D00BDD3EC /* fft_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C87E2A7F2C67009A3278 /* fft_init.c */; };
+		F347460C2FC3EBAA00BDD3EC /* fft_init_aarch64.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4CEC52A7F2C6F009A3278 /* fft_init_aarch64.c */; };
+		F347460D2FC3EC1600BDD3EC /* fft_template.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4CB5F2A7F2C6A009A3278 /* fft_template.c */; };
+		F347460E2FC3ECF200BDD3EC /* fft_init_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4CD6D2A7F2C6E009A3278 /* fft_init_table.c */; };
+		F34746102FC3F2BF00BDD3EC /* dct.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4CB682A7F2C6A009A3278 /* dct.c */; };
+		F34746112FC3F33100BDD3EC /* dct32_float.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4CC6F2A7F2C6B009A3278 /* dct32_float.c */; };
 		F353DD672E5C437A0036D0D4 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90121CCB2A91B44C0020E217 /* libx264.a */; };
 		F353DD682E5C43B40036D0D4 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90121CCB2A91B44C0020E217 /* libx264.a */; };
+		F3AD9CBB2FC581BD001F9E0F /* sdl2.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4B5882A7F2C4B009A3278 /* sdl2.c */; };
 		F3DE01992E7D5177006D413E /* utvideodec.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C7362A7F2C66009A3278 /* utvideodec.c */; };
 		F3DE019A2E7D5233006D413E /* lossless_videodsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C6AE2A7F2C65009A3278 /* lossless_videodsp.c */; };
 		F3DE019B2E7D523A006D413E /* lossless_videoencdsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 90A4C6C72A7F2C65009A3278 /* lossless_videoencdsp.c */; };
@@ -684,6 +708,55 @@
 			remoteGlobalIDString = F31B3E2E2F3496DB00C377AC;
 			remoteInfo = avutil_ios;
 		};
+		F34745E42FC3DE4000BDD3EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90A4B0492A7F2B42009A3278 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90B10D092A83A8A800BB4F4A;
+			remoteInfo = avcodec;
+		};
+		F34745E72FC3DE4000BDD3EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90A4B0492A7F2B42009A3278 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90A36CEA2A80E93C003864E9;
+			remoteInfo = avdevice;
+		};
+		F34745EA2FC3DE4000BDD3EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90A4B0492A7F2B42009A3278 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90B10CDA2A8395AF00BB4F4A;
+			remoteInfo = avformat;
+		};
+		F34745ED2FC3DE4000BDD3EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90A4B0492A7F2B42009A3278 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90A4D0552A7F2C8D009A3278;
+			remoteInfo = avutil;
+		};
+		F34745F02FC3DE4000BDD3EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90A4B0492A7F2B42009A3278 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90A36D012A80EE0B003864E9;
+			remoteInfo = swresample;
+		};
+		F34745F32FC3DE4000BDD3EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90A4B0492A7F2B42009A3278 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90A36D1C2A80F257003864E9;
+			remoteInfo = swscale;
+		};
+		F34745FA2FC3DEC000BDD3EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90A4B0492A7F2B42009A3278 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90D074E12A8C635D00209F22;
+			remoteInfo = avfilter;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -713,6 +786,26 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F34745D92FC3DDE900BDD3EC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F34746032FC3E2C000BDD3EC /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F34746022FC3E2C000BDD3EC /* libSDL2-2.0.0.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -8671,6 +8764,9 @@
 		F31B3F052F35F17500C377AC /* libavformat_ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libavformat_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31B3F8A2F35F1D000C377AC /* libavcodec_ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libavcodec_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31B3FC92F35F35400C377AC /* libx264_xcode_ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libx264_xcode_ios.a; path = "ffmpeg-6.0/3thrparty/libs/libx264_xcode_ios.a"; sourceTree = "<group>"; };
+		F34745DB2FC3DDE900BDD3EC /* ffplay */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ffplay; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34745FC2FC3DEF400BDD3EC /* libSDL-1.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL-1.2.0.dylib"; path = "../../../../../../opt/homebrew/Cellar/sdl12-compat/1.2.76/lib/libSDL-1.2.0.dylib"; sourceTree = "<group>"; };
+		F34746002FC3E2C000BDD3EC /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../../opt/homebrew/Cellar/sdl2/2.32.10/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -8725,8 +8821,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90B10CE82A83972700BB4F4A /* libavdevice.a in Frameworks */,
-				90B10CE92A83972700BB4F4A /* libavutil.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -8813,6 +8907,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F34745D82FC3DDE900BDD3EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F34746012FC3E2C000BDD3EC /* libSDL2-2.0.0.dylib in Frameworks */,
+				F34745F22FC3DE4000BDD3EC /* libswscale.a in Frameworks */,
+				F34745F82FC3DE9600BDD3EC /* libbz2.tbd in Frameworks */,
+				F34745E92FC3DE4000BDD3EC /* libavformat.a in Frameworks */,
+				F34745F52FC3DE6100BDD3EC /* libz.tbd in Frameworks */,
+				F34745EF2FC3DE4000BDD3EC /* libswresample.a in Frameworks */,
+				F34745F62FC3DE7400BDD3EC /* libm.tbd in Frameworks */,
+				F34745E62FC3DE4000BDD3EC /* libavdevice.a in Frameworks */,
+				F34745F72FC3DE8900BDD3EC /* libiconv.tbd in Frameworks */,
+				F34745EC2FC3DE4000BDD3EC /* libavutil.a in Frameworks */,
+				F34745F92FC3DEC000BDD3EC /* libavfilter.a in Frameworks */,
+				F34745E32FC3DE4000BDD3EC /* libavcodec.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -8823,6 +8936,7 @@
 				90A4B0872A7F2C47009A3278 /* ffmpeg-6.0 */,
 				90A4B0522A7F2B42009A3278 /* Products */,
 				90A4D0B72A7F3845009A3278 /* Frameworks */,
+				F34745DB2FC3DDE900BDD3EC /* ffplay */,
 			);
 			sourceTree = "<group>";
 		};
@@ -17437,6 +17551,8 @@
 		90A4D0B72A7F3845009A3278 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F34746002FC3E2C000BDD3EC /* libSDL2-2.0.0.dylib */,
+				F34745FC2FC3DEF400BDD3EC /* libSDL-1.2.0.dylib */,
 				F31B3FC92F35F35400C377AC /* libx264_xcode_ios.a */,
 				900754B42A932F3F00F1666F /* libavfilter.a */,
 				90121CCB2A91B44C0020E217 /* libx264.a */,
@@ -17827,6 +17943,33 @@
 			productReference = F31B3F8A2F35F1D000C377AC /* libavcodec_ios.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		F34745DA2FC3DDE900BDD3EC /* ffplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F34745E12FC3DDE900BDD3EC /* Build configuration list for PBXNativeTarget "ffplay" */;
+			buildPhases = (
+				F34745D72FC3DDE900BDD3EC /* Sources */,
+				F34745D82FC3DDE900BDD3EC /* Frameworks */,
+				F34745D92FC3DDE900BDD3EC /* CopyFiles */,
+				F34746032FC3E2C000BDD3EC /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F34745E52FC3DE4000BDD3EC /* PBXTargetDependency */,
+				F34745E82FC3DE4000BDD3EC /* PBXTargetDependency */,
+				F34745EB2FC3DE4000BDD3EC /* PBXTargetDependency */,
+				F34745EE2FC3DE4000BDD3EC /* PBXTargetDependency */,
+				F34745F12FC3DE4000BDD3EC /* PBXTargetDependency */,
+				F34745F42FC3DE4000BDD3EC /* PBXTargetDependency */,
+				F34745FB2FC3DEC000BDD3EC /* PBXTargetDependency */,
+			);
+			name = ffplay;
+			packageProductDependencies = (
+			);
+			productName = ffplay;
+			productReference = F34745DB2FC3DDE900BDD3EC /* ffplay */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -17866,6 +18009,9 @@
 					90D074E12A8C635D00209F22 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
+					F34745DA2FC3DDE900BDD3EC = {
+						CreatedOnToolsVersion = 26.4.1;
+					};
 				};
 			};
 			buildConfigurationList = 90A4B04C2A7F2B42009A3278 /* Build configuration list for PBXProject "ffmpeg_xcode_6.0" */;
@@ -17897,6 +18043,7 @@
 				F31B3EB22F35F11900C377AC /* swresample_ios */,
 				F31B3EC82F35F17500C377AC /* avformat_ios */,
 				F31B3F0F2F35F1D000C377AC /* avcodec_ios */,
+				F34745DA2FC3DDE900BDD3EC /* ffplay */,
 			);
 		};
 /* End PBXProject section */
@@ -17910,6 +18057,7 @@
 				90A36CFC2A80EC3F003864E9 /* lavfi.c in Sources */,
 				90A36CFD2A80EC8D003864E9 /* audiotoolbox.m in Sources */,
 				90A36CFB2A80EC20003864E9 /* utils.c in Sources */,
+				F3AD9CBB2FC581BD001F9E0F /* sdl2.c in Sources */,
 				90A36CF82A80EB08003864E9 /* avdevice.c in Sources */,
 				90A36CFA2A80EB86003864E9 /* alldevices.c in Sources */,
 				90A36CF62A80E9D2003864E9 /* avfoundation.m in Sources */,
@@ -18143,9 +18291,11 @@
 				90D075432A8C777F00209F22 /* mpegutils.c in Sources */,
 				90B10D152A83A8FA00BB4F4A /* ac3_parser.c in Sources */,
 				90D075212A8C710900209F22 /* h264_metadata_bsf.c in Sources */,
+				F34746092FC3E84400BDD3EC /* rdft.c in Sources */,
 				90D075092A8C6A4000209F22 /* pthread.c in Sources */,
 				90D075002A8C668700209F22 /* aac_ac3_parser.c in Sources */,
 				90D075492A8C7AE400209F22 /* dynamic_hdr_vivid.c in Sources */,
+				F347460E2FC3ECF200BDD3EC /* fft_init_table.c in Sources */,
 				90B10D292A83AA1B00BB4F4A /* mediacodec.c in Sources */,
 				F3DE019F2E7D5284006D413E /* utvideodsp.c in Sources */,
 				90B10D262A83A9F900BB4F4A /* imgconvert.c in Sources */,
@@ -18185,6 +18335,7 @@
 				90D075182A8C6F4300209F22 /* null_bsf.c in Sources */,
 				90D0751F2A8C70AE00209F22 /* h264_picture.c in Sources */,
 				90D075272A8C720F00209F22 /* h264pred.c in Sources */,
+				F34746112FC3F33100BDD3EC /* dct32_float.c in Sources */,
 				900754C42A9350B700F1666F /* kbdwin.c in Sources */,
 				90B10D1B2A83A97300BB4F4A /* bitstream.c in Sources */,
 				90121CCD2A91B49C0020E217 /* libx264.c in Sources */,
@@ -18193,6 +18344,7 @@
 				90D0751D2A8C705F00209F22 /* h264_slice.c in Sources */,
 				F3DE01A02E7D52B8006D413E /* utvideoenc.c in Sources */,
 				90D075292A8C729000209F22 /* cbs.c in Sources */,
+				F347460D2FC3EC1600BDD3EC /* fft_template.c in Sources */,
 				90B10D172A83A93200BB4F4A /* allcodecs.c in Sources */,
 				90D0753A2A8C763000209F22 /* h2645data.c in Sources */,
 				90D075482A8C7A1E00209F22 /* h264idct.c in Sources */,
@@ -18200,9 +18352,11 @@
 				F3DE019A2E7D5233006D413E /* lossless_videodsp.c in Sources */,
 				90B10D2B2A83AA3100BB4F4A /* options.c in Sources */,
 				909AF00C2A9366F800375A7A /* videotoolbox_vp9.c in Sources */,
+				F347460C2FC3EBAA00BDD3EC /* fft_init_aarch64.c in Sources */,
 				90D0751B2A8C700500209F22 /* h264_parser.c in Sources */,
 				900754CD2A935A0D00F1666F /* audiotoolboxenc.c in Sources */,
 				90D075502A8C7CFF00209F22 /* snow.c in Sources */,
+				F34746102FC3F2BF00BDD3EC /* dct.c in Sources */,
 				90D075392A8C760C00209F22 /* h274.c in Sources */,
 				90D075512A8C7D2E00209F22 /* hpeldsp.c in Sources */,
 				90D0753E2A8C76C200209F22 /* error_resilience.c in Sources */,
@@ -18210,12 +18364,15 @@
 				90B10D2A2A83AA2300BB4F4A /* mpeg12framerate.c in Sources */,
 				90D0754D2A8C7B8000209F22 /* me_cmp.c in Sources */,
 				90D0752E2A8C738300209F22 /* h264_cabac.c in Sources */,
+				F34746082FC3E5E300BDD3EC /* dct32_template.c in Sources */,
 				90D075412A8C774400209F22 /* cbs_bsf.c in Sources */,
 				90D075232A8C718300209F22 /* h2645_sei.c in Sources */,
 				90B10D302A83AA8D00BB4F4A /* raw.c in Sources */,
 				90B10D2D2A83AA6700BB4F4A /* parsers.c in Sources */,
 				90D075322A8C747200209F22 /* h2645_parse.c in Sources */,
 				90B10D182A83A94300BB4F4A /* avcodec.c in Sources */,
+				F34746062FC3E54400BDD3EC /* avfft.c in Sources */,
+				F347460A2FC3E88D00BDD3EC /* fft_init.c in Sources */,
 				90B10D192A83A95300BB4F4A /* avdct.c in Sources */,
 				90B10D282A83AA0D00BB4F4A /* mathtables.c in Sources */,
 				90D075222A8C713300209F22 /* h264_sei.c in Sources */,
@@ -18615,6 +18772,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F34745D72FC3DDE900BDD3EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F34746052FC3E50400BDD3EC /* cmdutils.c in Sources */,
+				F34746042FC3E34600BDD3EC /* opt_common.c in Sources */,
+				F34745E22FC3DDF700BDD3EC /* ffplay.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -18648,6 +18815,41 @@
 			target = F31B3E2E2F3496DB00C377AC /* avutil_ios */;
 			targetProxy = F31B3F8C2F35F23500C377AC /* PBXContainerItemProxy */;
 		};
+		F34745E52FC3DE4000BDD3EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90B10D092A83A8A800BB4F4A /* avcodec */;
+			targetProxy = F34745E42FC3DE4000BDD3EC /* PBXContainerItemProxy */;
+		};
+		F34745E82FC3DE4000BDD3EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90A36CEA2A80E93C003864E9 /* avdevice */;
+			targetProxy = F34745E72FC3DE4000BDD3EC /* PBXContainerItemProxy */;
+		};
+		F34745EB2FC3DE4000BDD3EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90B10CDA2A8395AF00BB4F4A /* avformat */;
+			targetProxy = F34745EA2FC3DE4000BDD3EC /* PBXContainerItemProxy */;
+		};
+		F34745EE2FC3DE4000BDD3EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90A4D0552A7F2C8D009A3278 /* avutil */;
+			targetProxy = F34745ED2FC3DE4000BDD3EC /* PBXContainerItemProxy */;
+		};
+		F34745F12FC3DE4000BDD3EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90A36D012A80EE0B003864E9 /* swresample */;
+			targetProxy = F34745F02FC3DE4000BDD3EC /* PBXContainerItemProxy */;
+		};
+		F34745F42FC3DE4000BDD3EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90A36D1C2A80F257003864E9 /* swscale */;
+			targetProxy = F34745F32FC3DE4000BDD3EC /* PBXContainerItemProxy */;
+		};
+		F34745FB2FC3DEC000BDD3EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90D074E12A8C635D00209F22 /* avfilter */;
+			targetProxy = F34745FA2FC3DEC000BDD3EC /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -18662,7 +18864,10 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ffmpeg-6.0";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ffmpeg-6.0",
+					/opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -18679,7 +18884,10 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/ffmpeg-6.0";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ffmpeg-6.0",
+					/opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -19352,6 +19560,54 @@
 			};
 			name = Release;
 		};
+		F34745DF2FC3DDE900BDD3EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85CWKC69K9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ffmpeg-6.0",
+					/opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/opt/homebrew/Cellar/sdl12-compat/1.2.76/lib",
+					/opt/homebrew/Cellar/sdl2/2.32.10/lib,
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F34745E02FC3DDE900BDD3EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85CWKC69K9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ffmpeg-6.0",
+					/opt/homebrew/Cellar/sdl2/2.32.10/include/SDL2,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/opt/homebrew/Cellar/sdl12-compat/1.2.76/lib",
+					/opt/homebrew/Cellar/sdl2/2.32.10/lib,
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -19504,6 +19760,15 @@
 			buildConfigurations = (
 				F31B3F882F35F1D000C377AC /* Debug */,
 				F31B3F892F35F1D000C377AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F34745E12FC3DDE900BDD3EC /* Build configuration list for PBXNativeTarget "ffplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F34745DF2FC3DDE900BDD3EC /* Debug */,
+				F34745E02FC3DDE900BDD3EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

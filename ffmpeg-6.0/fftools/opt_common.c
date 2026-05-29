@@ -221,7 +221,7 @@ static void print_buildconf(int flags, int level)
     }
 
     // Compensate for the weirdness this would cause
-    // when passing 'pkg-config --static'.
+    // pkg-config~ -> pkg-config
     while ((remove_tilde = strstr(str, "pkg-config~")) != NULL) {
         remove_tilde[sizeof("pkg-config~") - 2] = ' ';
     }
@@ -842,7 +842,7 @@ static int is_device(const AVClass *avclass)
     return AV_IS_INPUT_DEVICE(avclass->category) || AV_IS_OUTPUT_DEVICE(avclass->category);
 }
 
-static int show_formats_devices(void *optctx, const char *opt, const char *arg, int device_only, int muxdemuxers)
+static int show_formats_devices(void *optctx, const char *opt1, const char *arg1, int device_only, int muxdemuxers)
 {
     void *ifmt_opaque = NULL;
     const AVInputFormat *ifmt  = NULL;
@@ -1126,8 +1126,7 @@ static void log_callback_report(void *ptr, int level, const char *fmt, va_list v
     }
 }
 
-int init_report(const char *env, FILE **file)
-{
+int init_report(const char *env, FILE **file){
     char *filename_template = NULL;
     char *key, *val;
     int ret, count = 0;
@@ -1227,8 +1226,18 @@ int opt_max_alloc(void *optctx, const char *opt, const char *arg)
     return 0;
 }
 
-int opt_loglevel(void *optctx, const char *opt, const char *arg)
-{
+int opt_loglevel(void *optctx, const char *opt, const char *arg){
+    /*
+     ffmpeg -hide_banner -loglevel repeat+info -f lavfi -i xxx    //打印重复
+     ffmpeg -hide_banner -loglevel -repeat+info -f lavfi -i xxx   //过滤重复
+     ffmpeg -hide_banner -loglevel -repeat+error -f lavfi -i xxx
+     ffmpeg -hide_banner -loglevel -repeat+level+error -f lavfi -i xxx  去掉重复 +添加[error]  日志错误级别
+     */
+    /*
+     [AVFormatContext @ 0x...] [libx264 @ 0x...] [verbose] Opening file...
+     ^^^^^^^^^^^^^^^^^^^^^^^^^ ^^^^^^^^^^^^^^^^  ^^^^^^^^^
+      父上下文（若有）              模块/对象名         级别前缀（仅 level 打开时）
+     */
     const struct { const char *name; int level; } log_levels[] = {
         { "quiet"  , AV_LOG_QUIET   },
         { "panic"  , AV_LOG_PANIC   },
@@ -1236,7 +1245,7 @@ int opt_loglevel(void *optctx, const char *opt, const char *arg)
         { "error"  , AV_LOG_ERROR   },
         { "warning", AV_LOG_WARNING },
         { "info"   , AV_LOG_INFO    },
-        { "verbose", AV_LOG_VERBOSE },
+        { "verbose", AV_LOG_VERBOSE },//介于 info 和 debug 之间。
         { "debug"  , AV_LOG_DEBUG   },
         { "trace"  , AV_LOG_TRACE   },
     };
@@ -1244,7 +1253,7 @@ int opt_loglevel(void *optctx, const char *opt, const char *arg)
     char *tail;
     int flags = av_log_get_flags();
     int level = av_log_get_level();
-    int cmd, i = 0;
+    int cmd, i = 0;  //cmd -/+
 
     av_assert0(arg);
     while (*arg) {
@@ -1258,12 +1267,14 @@ int opt_loglevel(void *optctx, const char *opt, const char *arg)
             flags = 0;  /* missing relative prefix, build absolute value */
         }
         if (av_strstart(token, "repeat", &arg)) {
+            //重复日志
             if (cmd == '-') {
                 flags |= AV_LOG_SKIP_REPEATED;
             } else {
                 flags &= ~AV_LOG_SKIP_REPEATED;
             }
         } else if (av_strstart(token, "level", &arg)) {
+            //添加[error] [error] [info]...
             if (cmd == '-') {
                 flags &= ~AV_LOG_PRINT_LEVEL;
             } else {
@@ -1428,7 +1439,7 @@ int show_sources(void *optctx, const char *opt, const char *arg)
     return ret;
 }
 
-int show_sinks(void *optctx, const char *opt, const char *arg)
+int show_sinks(void *optctx1, const char *opt1, const char *arg)
 {
     const AVOutputFormat *fmt = NULL;
     char *dev = NULL;

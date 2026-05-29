@@ -127,6 +127,8 @@ typedef struct AVClass {
 
     /**
      * Return next AVOptions-enabled child or NULL
+     *  遍历所有已创建的示例 : AVCodecContext->h264Decoder
+     *
      */
     void* (*child_next)(void *obj, void *prev);
 
@@ -142,6 +144,8 @@ typedef struct AVClass {
      * @note The difference between child_next and this is that child_next
      *       iterates over _already existing_ objects, while child_class_iterate
      *       iterates over _all possible_ children.
+     *  遍历所有子AVClass : AVCodecContext->decoder_list  /  AVCodecContext->encoder_list
+
      */
     const struct AVClass* (*child_class_iterate)(void **iter);
 } AVClass;

@@ -197,6 +197,8 @@ typedef struct AVCodec {
     enum AVMediaType type;
     enum AVCodecID id;
     /**
+     *字段里用位标志（bit flags）声明自己支持什么行为，框架和调用方据此决定能不能这么用、该怎么用。
+     
      * Codec capabilities.
      * see AV_CODEC_CAP_*
      */

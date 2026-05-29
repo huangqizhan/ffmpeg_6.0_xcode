@@ -573,6 +573,7 @@ const AVOutputFormat *av_muxer_iterate(void **opaque)
     if (i < size) {
         f = muxer_list[i];
     } else if (tmp = atomic_load_explicit(&outdev_list_intptr, memory_order_relaxed)) {
+        //输出设备
         const FFOutputFormat *const *outdev_list = (const FFOutputFormat *const *)tmp;
         f = outdev_list[i - size];
     }
@@ -594,6 +595,7 @@ const AVInputFormat *av_demuxer_iterate(void **opaque)
     if (i < size) {
         f = demuxer_list[i];
     } else if (tmp = atomic_load_explicit(&indev_list_intptr, memory_order_relaxed)) {
+        //输入设备
         const AVInputFormat *const *indev_list = (const AVInputFormat *const *)tmp;
         f = indev_list[i - size];
     }
@@ -602,9 +604,8 @@ const AVInputFormat *av_demuxer_iterate(void **opaque)
         *opaque = (void*)(i + 1);
     return f;
 }
-
-void avpriv_register_devices(const FFOutputFormat * const o[], const AVInputFormat * const i[])
-{
+//注册设备
+void avpriv_register_devices(const FFOutputFormat * const o[], const AVInputFormat * const i[]){
     atomic_store_explicit(&outdev_list_intptr, (uintptr_t)o, memory_order_relaxed);
     atomic_store_explicit(&indev_list_intptr,  (uintptr_t)i, memory_order_relaxed);
 }

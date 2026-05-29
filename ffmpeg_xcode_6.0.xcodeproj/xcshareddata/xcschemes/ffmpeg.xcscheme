@@ -56,8 +56,60 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-y -hwaccel videotoolbox -i /Users/haixiaomian/Desktop/ff37.mp4   -vcodec h264_videotoolbox  -acodec copy  /Users/haixiaomian/Desktop/out.mp4"
+            argument = "-dispositions"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-hide_banner -loglevel repeat+info -f lavfi -i"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-hide_banner -loglevel -repeat+level+error -f lavfi -i xxx "
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-report "
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-report -i in.mp4 out.mp4"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-filters"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-protocols"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-bsfs"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-help  decoder=h264"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-codecs"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-devices"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-formats"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-buildconf"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-y -hwaccel videotoolbox -i /Users/haixiaomian/Desktop/ff37.mp4   -vcodec h264_videotoolbox  -acodec copy  /Users/haixiaomian/Desktop/out.mp4"
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-y -i /Users/haixiaomian/Desktop/ff37.mp4   -vcodec h264_videotoolbox  -acodec copy  /Users/haixiaomian/Desktop/out.mp4"
